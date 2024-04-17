@@ -7,7 +7,6 @@
 ## Contents
 - [Towards Human-in-the-loop Onset Detection: A Transfer Learning Approach for Maracatu](#towards-human-in-the-loop-onset-detection-a-transfer-learning-approach-for-maracatu)
   - [Contents](#contents)
-  - [Abstract](#abstract)
   - [Code](#code)
   - [Installation](#installation)
     - [Setting Up the Conda Environment](#setting-up-the-conda-environment)
@@ -15,9 +14,6 @@
     - [Results](#results)
     - [Training](#training)
   - [License](#license)
-
-## Abstract
-Musical onset detection remains a challenge for uncommon instruments and non-Western polyphonic music, where state-of-the-art methods often fall short. This study focuses on the Afro-Brazilian *Maracatu* ensemble, adapting leading models and improving their performance on challenging examples. Inductive and transductive transfer learning approaches are used to notably enhance detection performance, making significant improvements over existing methods for these underrepresented sounds.
 
 ## Code
 This directory contains Python scripts for the project. These scripts are provided for reproducibility purposes and are not executable without full environmental setup and data, e.g. base models and Maracatu dataset:
