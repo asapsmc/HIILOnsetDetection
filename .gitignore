@@ -4,7 +4,6 @@ Icon?
 
 *.pkl
 *.code-workspace
-data/*
 exports/**/final
 exports/**/stats
 models/*
@@ -15,5 +14,8 @@ outputs/**/analysis
 report/*
 
 *.h5
-**.npy
-**.npz
+*.npy
+*.npz
+*.onsets
+*.flac
+Icon
