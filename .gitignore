@@ -5,10 +5,15 @@ Icon?
 *.pkl
 *.code-workspace
 data/*
-exports/*
+exports/**/final
+exports/**/stats
 models/*
 pkl/*
-outputs/*
+outputs/**/_temp
+outputs/**/analysis
+
 report/*
 
 *.h5
+**.npy
+**.npz

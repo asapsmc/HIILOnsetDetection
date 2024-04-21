@@ -10,7 +10,6 @@
   - [Code](#code)
   - [Installation](#installation)
     - [Setting Up the Conda Environment](#setting-up-the-conda-environment)
-  - [How to Reproduce the Experiment Results](#how-to-reproduce-the-experiment-results)
   - [How to Rerun the Full Experiment Locally](#how-to-rerun-the-full-experiment-locally)
   - [Additional Figures and Tables](#additional-figures-and-tables)
   - [License](#license)
@@ -56,30 +55,6 @@ This project uses a Conda environment to ensure all dependencies are managed cor
 
 Note: This will install all required packages via Conda and pip as specified in the environment file. Please review the package versions and adjust them as necessary.
 
-## How to Reproduce the Experiment Results
-To reproduce the paper results, execute:
-
-1. Activate the Environment
-
-    **macOS M1 Users:**
-      ```bash
-      conda activate maracatu
-      ```
-    **non-M1 Users:**
-      ```bash
-      conda activate maracatu_minimum
-      ```
-
-2. Run the Reproduction Script
-    ```bash
-    python evaluate_results.py
-    ``` 
-
-    This script:
-    - Uses saved results for Inductive TL with TCNv1 (`rid` 000 to 014) and Transductive TL with TCNv2 (`rid` 020 to 034), covering various frozen layer configurations. 
-    - Results are outputted as `.csv` files in the `/results` folder under the respective run IDs.
-
-
 ## How to Rerun the Full Experiment Locally
 
 1. Obtain Base Models and *Maracatu* dataset
@@ -88,12 +63,11 @@ To reproduce the paper results, execute:
 
 2. Obtain *Maracatu* dataset audio (`*.flac`) from authors and place it in the `/data/**/audio` folder.
 
-1. Run the Experiment Script
+3. Run the Experiment Script
 
     ```bash
-    python rerun_experiments.py
+    python rerun_experiment.py
     ```
-
     This script: 
     - Fine-tunes models for each of Maracatu subdatasets.
     - Updates the ledger with new run IDs.

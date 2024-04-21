@@ -1,17 +1,16 @@
 import logging
-import os
 import pickle
 from pathlib import Path
 
 import keras.backend as K
 import madmom
-import modules.config as cfg
-import modules.definitions as dfn
-import modules.external as ext
-import modules.utils as utl
 import numpy as np
 from keras.models import load_model
 from madmom.features.onsets import CNNOnsetProcessor, RNNOnsetProcessor
+
+import modules.config as cfg
+import modules.definitions as dfn
+import modules.utils as utl
 
 
 def finetune(model, arch, finetuning_data, callbacks=None, verbose=False):

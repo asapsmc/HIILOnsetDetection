@@ -1,8 +1,4 @@
-import os
-import pickle
-import shutil
 from pathlib import Path
-from typing import List
 
 TCNV1 = 'TCNv1'
 TCNV2 = 'TCNv2'
@@ -14,30 +10,10 @@ MADMOM_RNN = 'madmomRNN'
 MADMOM_CNN = 'madmomCNN'
 EXT_ARCHS = [MADMOM_RNN, MADMOM_CNN]
 
-# INSTRUMENTS = ['CAIXA', 'CUICA', 'GONGE_LO', 'TAMBOR_HI', 'MINEIRO']
 FPS = 100
 
-AUDIO_SUFIX = {
-    'bambuco': '.wav',
-}
-
-# Use pathlib's methods to handle paths more effectively and Pythonically
 current_path = Path.cwd()
-if 'Projects' not in current_path.parts or 'Research' not in current_path.parts:
-    raise ValueError("The script must be run within a 'Projects/Research/projectX' directory structure")
-
-# Dynamically find the project path by locating "Projects" and "Research"
-try:
-    projects_index = current_path.parts.index('Projects')
-    # Using slicing to ensure "Research" follows "Projects" and extracting the project name dynamically
-    research_index = projects_index + 1 + current_path.parts[projects_index + 1:].index('Research')
-    project_name = current_path.parts[research_index + 1]
-except ValueError:
-    # If "Projects" or "Research" are not found in the expected order, or the project name is missing
-    raise ValueError("Could not determine the project path within the 'Projects/Research' structure.")
-
-# Construct the base path for the project using the dynamic project name
-base_path = Path(*current_path.parts[:research_index + 2])
+base_path = current_path
 
 # Define all other paths relative to the base path
 DATA_PATH = base_path / 'data'
@@ -72,12 +48,6 @@ def get_path(dataset, subdataset=None, suffix='', location=Path.cwd()):
     Returns:
     - dict: A dictionary with keys representing different types of paths (e.g., 'annotations', 'audio', 'baseline', 'analysis') and their corresponding `Path` objects.
     """
-    # Ascend to the project root directory, assuming the 'Projects/Research' structure
-    while location.parts[-3:] != ('Projects', 'Research', location.parts[-1]):
-        location = location.parent
-        if location == Path(location.root):
-            raise ValueError("Project root not found. Ensure you're within the 'Projects/Research' directory structure.")
-
     base_path = location
 
     if subdataset is None:
@@ -152,72 +122,3 @@ def iterate_datasets_and_subdatasets(datasets=None):
             pkl_path = f'{PKL_PATH}/{dataset}.pkl' if subdataset is None else f'{PKL_PATH}/{dataset}/{subdataset}.pkl'
 
             yield dataset, subdataset, pkl_path
-
-
-def get_evaluation_file_indices(dataset: str, total_files: int) -> List[int]:
-    """
-    Determine which file indices to include in the evaluation.
-
-    Args:
-        dataset (str): The dataset.
-        total_files (int): The total number of files in the dataset or subdataset.
-
-    Returns:
-        list: A list of file indices to include in the evaluation.
-    """
-    subdatasets = SUBDATASETS_MAPPING.get(dataset)
-    start_index = 0 if subdatasets in (None, [None]) else 1
-    return list(range(start_index, total_files))
-
-
-def get_filenames_from_dataset(dataset='maracatu', subdataset=None, list_idx=None, suffix=''):
-    import modules.definitions as dfn
-    db = dfn.load_dataset(dataset, subdataset)
-    names = db.files[1:] if list_idx is None else db.files[list_idx]
-    del db
-    return names
-
-
-def int_to_xycoords(i):
-    '''
-    Converts from integer into 2*2 x,y coords 
-    Good for use in modules.plot with subplots
-    e.g 0 --> 0,0   1__> 0,1 
-    '''
-    binary = "{0:02b}".format(i)  # format into binary of fixed length=2
-    x, y = int(binary[0]), int(binary[1])
-    return x, y
-
-
-def send_to_paper(source):
-    target = Path(str(source).replace(str(report_path), str(thesis_path)))
-    # Copy original txt file
-    shutil.copyfile(source, target)
-    return True
-
-
-# Others
-TRAIN_DUR = 5      # seconds
-VAL_DUR = 0         # seconds
-FT_DUR = 5          # seconds
-
-DAUG = 'daug'       # with data augmentation
-NODAUG = 'nodaug'   # without data augmentation
-
-TG = 'tg'           # with tempo guide
-NG = 'ng'           # without tempo guide
-
-ALLEV = 'AllEv'   # File by File Evaluation
-AVGEV = 'AvgEv'   # Mean Evaluation by dataset (madmom)
-
-FR = 'fullRes'       # Full results
-TR = 'testRes'       # Test results (only the test part of the file)
-
-STD = 'std'         # Standard DBN processor
-ADA = 'ada'         # Adaptive DBN processor
-PPA = 'ppa'         # Peak-picking algorithm
-
-OLD = 'old'         # Old Results
-FIN = 'fin'
-
-EV_STR = 'EVAL'     # String to put in temp files of evaluation
