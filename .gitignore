@@ -1,2 +1,14 @@
 # Ignore all files and directories starting with an underscore
 _*
+Icon?
+
+*.pkl
+*.code-workspace
+data/*
+exports/*
+models/*
+pkl/*
+outputs/*
+report/*
+
+*.h5
