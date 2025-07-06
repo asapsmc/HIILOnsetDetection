@@ -13,4 +13,3 @@ dependencies:
       - tensorflow==2.14.0
       - tensorflow-addons==0.23.0
       - madmom==1.16.0
-prefix: /Users/asapinto/miniforge3/envs/24env

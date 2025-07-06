@@ -204,4 +204,3 @@ dependencies:
       - typeguard==2.13.3
       - werkzeug==3.0.1
       - wrapt==1.14.1
-prefix: /Users/asapinto/miniforge3/envs/24env

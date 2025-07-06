@@ -10,8 +10,10 @@ models/*
 pkl/*
 outputs/**/_temp
 outputs/**/analysis
-
+data/**
 report/*
+_REAMDME.md
+.gitignore
 
 *.h5
 *.npy
@@ -19,3 +21,5 @@ report/*
 *.onsets
 *.flac
 Icon
+
+ledger.csv
