@@ -1,8 +1,5 @@
 # Towards Human-in-the-loop Onset Detection: A Transfer Learning Approach for *Maracatu*
 
-<!-- Code Repository for ISMIR 2024 submission "Towards Human-in-the-loop Onset Detection: A Transfer Learning Approach for Maracatu".   -->
-**Note: This repository is provisional and part of a blind submission process for peer review. As such, it currently omits certain elements that could compromise the anonymity required by the review. The complete repository will be updated with the full content, including all identifiable and supplementary items, once the review process has concluded.**
-
 
 ## Contents
 - [Towards Human-in-the-loop Onset Detection: A Transfer Learning Approach for *Maracatu*](#towards-human-in-the-loop-onset-detection-a-transfer-learning-approach-for-maracatu)
@@ -13,6 +10,7 @@
   - [How to Rerun the Full Experiment Locally](#how-to-rerun-the-full-experiment-locally)
   - [Additional Figures and Tables](#additional-figures-and-tables)
   - [License](#license)
+  - [📘 Citation](#-citation)
 
 ## Code
 This directory contains Python scripts for the project. These scripts are provided for reproducibility purposes and are not executable without full environmental setup and data, e.g. base models and *Maracatu* dataset:
@@ -39,7 +37,7 @@ This project provides two Conda environment files:
 - `environment.yml` for macOS M1 users which includes specific versions for compatibility.
 - `minimum_environment.yml` for users on other platforms, including only the core libraries needed across all systems.
 
-This project uses a Conda environment to ensure all dependencies are managed correctly. The provided `environment.yml` file is tailored for compatibility with macOS M1 systems, which have specific requirements for TensorFlow and Keras versions. **Other users** are advised to start with the `minimum_environment.yml` and make any necessary adjustments based on their specific system requirements.
+This project uses a Conda environment to ensure all dependencies are managed correctly. The provided `environment.yml` file is tailored for compatibility with macOS M1 systems, which have specific requirements for TensorFlow and Keras versions. Other users are advised to start with the `minimum_environment.yml` and make any necessary adjustments based on their specific system requirements.
 
 **For macOS M1 Users:**
    ```bash
@@ -57,11 +55,13 @@ Note: This will install all required packages via Conda and pip as specified in 
 
 ## How to Rerun the Full Experiment Locally
 
-1. Obtain Base Models and *Maracatu* dataset
+1. Obtain Base Models
 
     Request the `.h5` base model files for TCNv1 and TCNv2 from the corresponding authors (as identified in the paper), and place them in the `/models` folder.
 
-2. Obtain *Maracatu* dataset audio (`*.flac`) from authors and place it in the `/data/**/audio` folder.
+2. Obtain *Maracatu* dataset 
+    
+    Request the audio (`*.flac`) from dataset authors and place it in the `/data/**/audio` folder.
 
 3. Run the Experiment Script
 
@@ -91,7 +91,7 @@ The `docs` folder is organized into two subdirectories to facilitate navigation 
       - Note: The figures whose names start with `compact_` are the ones used in the paper.
 
       These documents are provided in high quality to enhance detailed visualization and understanding, not possible within the limited size constraints of the paper.
-- `docs/tables/`, this folder contains comprehensive tables (`*.pdf`) detailing performance metrics such as F-measure, Precision, and Recall, along with counts of True Positives (TP), False Positives (FP), and False Negatives (FN) across the *Maracatu* dataset for baseline and finetuned models on the TCNv1 and TCNv2 network.
+- `docs/tables/`, this folder contains full tables (`*.pdf`) detailing performance metrics such as F-measure, Precision, and Recall, along with counts of True Positives (TP), False Positives (FP), and False Negatives (FN) across the *Maracatu* dataset for baseline and finetuned models on the TCNv1 and TCNv2 network.
 
 
 ## License
@@ -99,4 +99,13 @@ This project, including all code and figures, is licensed under the GNU General 
 
 The full license text is included in the [LICENSE](LICENSE) file in this repository. Further details and FAQs about the GPL v3.0 can be found at https://www.gnu.org/licenses/gpl-3.0.html.
 
-Please ensure to adhere to the citation requirements outlined in the documentation when using or referencing the project materials.
+
+## 📘 Citation
+
+If you use this software or data in your research, please cite the following paper:
+
+> Pinto, A. S. (2025). *Towards Human-in-the-Loop Onset Detection: A Transfer Learning Approach for Maracatu*. Proceedings of the 26th International Society for Music Information Retrieval Conference (ISMIR), Daejeon, South Korea.
+
+[arXiv link](https://arxiv.org/abs/...) | [Zenodo DOI](https://doi.org/10.5281/zenodo.XXXXXXX)
+
+You can also cite the repository directly by using the `CITATION.cff` file or clicking on the “Cite this repository” button on the right sidebar of this GitHub page.

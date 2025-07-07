@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use this software or data, please cite it as below."
 title: "Towards Human-in-the-Loop Onset Detection: A Transfer Learning Approach for Maracatu"
 authors:
-  - family-names: "Sá Pinto"
-    given-names: "António"
+  - family-names: "Pinto"
+    given-names: "António Sá"
 version: "1.0.0"
-date-released: 2025-07-06
+date-released: 2025-07-07
 conference:
   name: "26th International Society for Music Information Retrieval Conference (ISMIR)"
   location: "Daejeon, South Korea"
