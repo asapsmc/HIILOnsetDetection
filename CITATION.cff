@@ -1,15 +1,23 @@
 cff-version: 1.2.0
-message: "If you use this software or data, please cite it as below."
+message: "If you use this software, please cite the associated paper below."
 title: "Towards Human-in-the-Loop Onset Detection: A Transfer Learning Approach for Maracatu"
 authors:
   - family-names: "Pinto"
     given-names: "António Sá"
 version: "1.0.0"
 date-released: 2025-07-07
-conference:
-  name: "26th International Society for Music Information Retrieval Conference (ISMIR)"
-  location: "Daejeon, South Korea"
-  date: 2025
 license: "CC-BY-4.0"
 url: "https://github.com/asapsmc/HIILOnsetDetection"
-# add the DOI after Zenodo mints it
+
+preferred-citation:
+  type: conference-paper
+  title: "Towards Human-in-the-Loop Onset Detection: A Transfer Learning Approach for Maracatu"
+  authors:
+    - family-names: "Pinto"
+      given-names: "António Sá"
+  conference-name: "26th International Society for Music Information Retrieval Conference (ISMIR)"
+  conference-location: "Daejeon, South Korea"
+  year: 2025
+  month: 9  # Adjust based on actual conference date
+  url: "https://arxiv.org/abs/2507.04858"  # Replace with your arXiv link
+  doi: "10.5281/zenodo.XXXXXXX"  # Add after Zenodo deposit
