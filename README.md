@@ -24,12 +24,7 @@ This directory contains Python scripts for the project. These scripts are provid
   - `exports/`: Additional exportable resources or processed files.
 
 ## Installation
-Clone this repository to view all files locally:
-
-```bash
-git clone https://github.com/yourusername/Maracatu-Onset-Detection.git
-cd Maracatu-Onset-Detection
-```
+Clone this repository to view all files locally.
 
 ### Setting Up the Conda Environment
 
