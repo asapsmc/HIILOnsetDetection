@@ -101,6 +101,6 @@ If you use this software or data in your research, please cite the following pap
 
 > Pinto, A. S. (2025). *Towards Human-in-the-Loop Onset Detection: A Transfer Learning Approach for Maracatu*. Proceedings of the 26th International Society for Music Information Retrieval Conference (ISMIR), Daejeon, South Korea.
 
-[arXiv link](https://arxiv.org/abs/...) | [Zenodo DOI](https://doi.org/10.5281/zenodo.XXXXXXX)
+[arXiv link](https://arxiv.org/abs/2507.04858) | [Zenodo DOI](https://doi.org/10.5281/zenodo.XXXXXXX)
 
 You can also cite the repository directly by using the `CITATION.cff` file or clicking on the “Cite this repository” button on the right sidebar of this GitHub page.
