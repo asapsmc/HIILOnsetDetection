@@ -1,4 +1,5 @@
 # Towards Human-in-the-loop Onset Detection: A Transfer Learning Approach for *Maracatu*
+[![arXiv](https://img.shields.io/badge/arXiv-2507.04858-b31b1b.svg)](https://arxiv.org/abs/2507.04858) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15835833.svg)](https://doi.org/10.5281/zenodo.15835833)
 
 
 ## Contents
@@ -10,7 +11,7 @@
   - [How to Rerun the Full Experiment Locally](#how-to-rerun-the-full-experiment-locally)
   - [Additional Figures and Tables](#additional-figures-and-tables)
   - [License](#license)
-  - [📘 Citation](#-citation)
+  - [Citation](#citation)
 
 ## Code
 This directory contains Python scripts for the project. These scripts are provided for reproducibility purposes and are not executable without full environmental setup and data, e.g. base models and *Maracatu* dataset:
@@ -95,12 +96,12 @@ This project, including all code and figures, is licensed under the GNU General 
 The full license text is included in the [LICENSE](LICENSE) file in this repository. Further details and FAQs about the GPL v3.0 can be found at https://www.gnu.org/licenses/gpl-3.0.html.
 
 
-## 📘 Citation
+## Citation
 
 If you use this software or data in your research, please cite the following paper:
 
 > Pinto, A. S. (2025). *Towards Human-in-the-Loop Onset Detection: A Transfer Learning Approach for Maracatu*. Proceedings of the 26th International Society for Music Information Retrieval Conference (ISMIR), Daejeon, South Korea.
 
-[arXiv link](https://arxiv.org/abs/2507.04858) | [Zenodo DOI](https://doi.org/10.5281/zenodo.XXXXXXX)
+[arXiv link](https://arxiv.org/abs/2507.04858) | [Zenodo DOI](https://doi.org/10.5281/zenodo.15835833)
 
 You can also cite the repository directly by using the `CITATION.cff` file or clicking on the “Cite this repository” button on the right sidebar of this GitHub page.
